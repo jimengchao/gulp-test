@@ -9,11 +9,9 @@ function show(){
 	}) 
 }
 
-function show1(){
+function show1(){ 
 	return new Promise( (res) => {
 		alert(2);
 		res();
 	}) 
 }
-
-show()

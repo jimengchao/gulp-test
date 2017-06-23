@@ -36,11 +36,11 @@ gulp.task('scss', () => {
 
 // 创建本地server
 gulp.task('serve', function() {
+    watchTask()
     browserSync.init({
         server: "./"
     });
-    watchTask()
-    gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch("./").on('change', browserSync.reload);
 })
 
 function watchTask(){
