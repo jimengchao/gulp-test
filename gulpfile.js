@@ -19,19 +19,19 @@ gulp.task('minifyjs',() => {
 
 // 编译压缩 scss
 gulp.task('scss', () => {
-	gulp.src('./src/scss/*.scss')
-		//  添加 sourcemap
-		.pipe($.sourcemaps.init())
-		.pipe(sass())
-		// 自动添加浏览器 前缀
-		.pipe($.autoprefixer({
-			 browsers: AUTOPREFIXER_BROWSERS,
-			 cascade: false,
-			 remove: true
-		}))
-		.pipe($.sourcemaps.write('./'))
-		.pipe(gulp.dest('./dist/css'))
-		.pipe(browserSync.stream())
+    gulp.src('./src/scss/*.scss')
+	//  添加 sourcemap
+	.pipe($.sourcemaps.init())
+	.pipe(sass())
+	// 自动添加浏览器 前缀
+	.pipe($.autoprefixer({
+		 browsers: AUTOPREFIXER_BROWSERS,
+		 cascade: false,
+		 remove: true
+	}))
+	.pipe($.sourcemaps.write('./'))
+	.pipe(gulp.dest('./dist/css'))
+	.pipe(browserSync.stream())
 })
 
 // 创建本地server
